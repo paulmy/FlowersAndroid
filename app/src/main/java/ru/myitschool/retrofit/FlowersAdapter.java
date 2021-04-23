@@ -13,12 +13,12 @@ import android.widget.TextView;
 import java.util.List;
 
 
-public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
+public class FlowersAdapter extends RecyclerView.Adapter<FlowersAdapter.ViewHolder> {
 
-    private List<PostModel> posts;
+    private List<Flower> flowers;
 
-    public PostsAdapter(List<PostModel> posts) {
-        this.posts = posts;
+    public FlowersAdapter(List<Flower> flowers) {
+        this.flowers = flowers;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        PostModel post = posts.get(position);
+        Flower post = flowers.get(position);
         holder.image.setImageResource(R.mipmap.ic_launcher);
         holder.name.setText(post.getName());
         holder.category.setText(post.getCategory());
@@ -45,9 +45,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        if (posts == null)
+        if (flowers == null)
             return 0;
-        return posts.size();
+        return flowers.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -63,7 +63,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             name = (TextView) itemView.findViewById(R.id.postitem_name);
             price = (TextView) itemView.findViewById(R.id.postitem_price);
             insruct = (TextView) itemView.findViewById(R.id.postitem_instuction);
-            category = (TextView) itemView.findViewById(R.id.postitem_instuction);
+            category = (TextView) itemView.findViewById(R.id.postitem_category);
         }
     }
 }

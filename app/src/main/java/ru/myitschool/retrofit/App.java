@@ -15,7 +15,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://lyceum.nstu.ru")
+                .baseUrl("http://lyceum.nstu.ru/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         flowerApi = retrofit.create(FlowerApi.class);

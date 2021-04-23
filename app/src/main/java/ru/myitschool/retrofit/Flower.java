@@ -3,7 +3,7 @@ package ru.myitschool.retrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PostModel {
+public class Flower {
 
     public String getCategory() {
         return category;
